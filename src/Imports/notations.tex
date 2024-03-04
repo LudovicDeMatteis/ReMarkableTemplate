@@ -1,0 +1,313 @@
+% Basic abbreviations
+%\newcommand{\st}{:}
+\newcommand{\est}[1]{\widehat{#1}}
+\newcommand{\err}[1]{\widetilde{#1}}
+
+% Differential operators
+\newcommand{\parDeriv}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\gradient}[2]{\nabla_{#2}{#1}}
+\newcommand{\Jacobian}[2]{\gradient{#1}{#2}^T}
+
+% Other operators
+\newcommand{\kron}{\otimes}
+\newcommand{\dsum}{\displaystyle\sum}
+
+% Generic sets
+\newcommand{\SE}[1]{\mathrm{SE}(#1)}
+% SO group
+\newcommand{\SO}[1]{\mathrm{SO}(#1)}
+% so algebra
+\newcommand{\soAlgebra}[1]{\mathfrak{so}(#1)}
+% se algebra
+\newcommand{\seAlgebra}[1]{\mathfrak{se}(#1)}
+\newcommand{\gAlgebra}{\mathfrak{g}}
+\newcommand{\setS}[1]{\mathcal{S}^{#1}}
+\newcommand{\nullSpace}{\mathcal{N}}
+
+% Geometric quantities
+
+% \renewcommand{\vect}[1]{\boldsymbol{#1}}
+\newcommand{\matr}[1]{\boldsymbol{#1}}
+\newcommand{\refFrame}[1]{\mathcal{#1}}
+\newcommand{\rotMat}[2]{{\prescript{#1}{}{\matr{R}}}_{#2}}
+\newcommand{\tranVec}[3]{{\prescript{#3}{#1}{\vect{t}}}_{#2}}
+\newcommand{\roll}{\phi}
+\newcommand{\pitch}{\theta}
+\newcommand{\yaw}{\psi}
+\newcommand{\z}{\vect{z}}
+\newcommand{\ez}{\vect{e}_3}
+\newcommand{\eye}[1]{\matr{I}_{#1}}
+\newcommand{\zeros}[2]{
+\ifthenelse{\equal{#2}{1}}{\vect{0}_{#1}}{\matr{\cancel{O}}_{#1 \times #2}}
+}
+\newcommand{\ones}[2]{
+\ifthenelse{\equal{#2}{1}}{\vect{1}_{#1}}{\matr{1}_{#1 \kron #2}}
+}
+% robot configuration and state
+\newcommand{\world}{\refFrame{W}}
+\newcommand{\body}{\refFrame{B}}
+\newcommand{\bodyYaw}{\refFrame{A}}
+\newcommand{\configurationVector}{\q}
+\newcommand{\brm}[2]{\bcalB^{#1}_{#2}} 
+
+% Indexes
+\newcommand{\worldIndex}{\mathcal{W}}
+
+% Weights of the Bearing Rigidity Matrix
+\newcommand{\weight}{W}
+
+\newcommand{\posElem}{p}
+\newcommand{\posElemNormalized}[1]{\bar{\p}_{#1}} 
+%\newcommand{\dist}{d}
+\newcommand{\linVelElem}{v}
+\newcommand{\linVel}{\vect{\linVelElem}}
+\newcommand{\ori}{\matr{R}}
+\newcommand{\angVelElem}{v}
+\newcommand{\angVel}{\vect{\angVelElem}}
+
+\newcommand{\config}{\vect{q}}
+\newcommand{\linVelCmd}{\vect{u}}
+\newcommand{\yawRateCmd}{w}
+
+\newcommand{\bearing}{\vect{\beta}}
+\newcommand{\projMat}{\matr{P}}
+\newcommand{\skewZ}{\matr{S}}
+
+\newcommand{\Rij}{{^{i}\!}\boldsymbol{R}_j}
+
+\newcommand{\Rkappaj}{{^{\kappa}\!}\boldsymbol{R}_j}
+\newcommand{\Rkappam}{{^{\kappa}\!}\boldsymbol{R}_m}
+\newcommand{\Rupsilonj}{{^{\upsilon}\!}\boldsymbol{R}_j}
+\newcommand{\Rupsilonm}{{^{\upsilon}\!}\boldsymbol{R}_m}
+
+
+
+% Graph quantities
+\newcommand{\graph}{\mathcal{G}}
+\newcommand{\graphDist}{{\graph_u}}
+\newcommand{\graphCompl}{{\mathcal{K}_\nRobots}}
+\newcommand{\edge}{e}
+\newcommand{\edges}{\mathcal{E}}
+\newcommand{\edgesDist}{{\edges_u}}
+\newcommand{\edgeDist}{{\edge_u}}
+\newcommand{\neigh}{\mathcal{U}}
+\newcommand{\vertices}{\mathcal{V}}
+\newcommand{\verticesDist}{{\vertices_u}}
+\newcommand{\nRobots}{N}
+\newcommand{\nEdges}{{|\edges|}}
+\newcommand{\nEdgesDist}{{|\edgesDist|}}
+
+\newcommand{\rigMat}[2]{{\matr{\mathcal{B}}^{#1}_{#2}}}
+\newcommand{\worldRigMat}{\bcalB^{\calW}_{\graph}}
+\newcommand{\bodyRigMat}{\bcalB_{\graph}}
+\newcommand{\distMat}{\matr{D}}
+\newcommand{\symRigMat}[2]{\rigMat{#1}{#2}^T\rigMat{#1}{#2}}
+
+% errors
+\newcommand{\locErr}{\vect{e}_L}
+\newcommand{\bearErr}{\vect{e}_F}
+
+% Active estimation and observability
+\newcommand{\unmeasElem}{\chi}
+\newcommand{\unmeas}{\vect{\unmeasElem}}
+
+\newcommand{\ObsMat}{\matr{\Omega}}
+\newcommand{\fm}{\vect{f}}
+\newcommand{\fu}{\vect{g}}
+\renewcommand{\H}{\matr{H}}
+\newcommand{\predErr}{\vect{\xi}}
+\newcommand{\estErr}{\widetilde{\vect{\chi}}}
+\newcommand{\obsGain}{\alpha}
+\newcommand{\eig}{\lambda}
+\newcommand{\lambdaBar}{\bar{\lambda}}
+\newcommand{\eigsVect}{\vect{\eig}}
+\newcommand{\obsIndex}{\bar\lambda}
+
+\newcommand{\rigEig}[1]{{\eig}_{6_{#1}}}
+
+%% useful environements
+\newtheorem{lemma}{Lemma}
+\newtheorem{assumption}{Assumption}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{prop}{Proposition}
+
+
+%% counters
+\newcounter{simulationcase}
+\newcommand{\simulationCase}[1]{\refstepcounter{simulationcase}\label{#1}}
+% \renewcommand\theplanMethod{\Alph{simulationcases}} 
+
+% cleveref
+%\crefname{equation}{}{}
+%\Crefname{equation}{Equation}{Equations}
+%\crefformat{equation}{(#2#1#3)}
+%\creflabelformat{equation}{(#2#1#3)}
+%\crefmultiformat{equation}{(#2#1#3}%
+%  {--#2#1#3)}{, (#2#1#3)}{ and~(#2#1#3)}
+%\Crefmultiformat{equation}{Equations (#2#1#3}%
+%  {--#2#1#3)}{, (#2#1#3)}{ and~(#2#1#3)}
+%\crefname{figure}{Fig.}{Figs.}
+%\Crefname{figure}{Figure}{Figures}
+%\crefname{part}{Part}{Parts}
+%\Crefname{part}{Part}{Parts}
+%\crefname{chapter}{Chapt.}{Chapts.}
+%\Crefname{chapter}{Chapter}{Chapters}
+%\crefname{section}{Sect.}{Sects.}
+%\Crefname{section}{Section}{Sections}
+%\crefname{subsection}{Sect.}{Sects.}
+%\Crefname{subsection}{Section}{Sections}
+%\crefname{subsubsection}{Sect.}{Sects.}
+%\Crefname{subsubsection}{Section}{Sections}
+%\crefname{appsec}{Appendix}{Appendices}
+%\Crefname{appsec}{Appendix}{Appendices}
+%\crefname{appendix}{Appendix}{Appendices}
+%\Crefname{appendix}{Appendix}{Appendices}
+%\crefname{subappendix}{Appendix}{Appendices}
+%\Crefname{subappendix}{Appendix}{Appendices}
+%\crefname{lemma}{Lemma}{Lemmas}
+%\Crefname{lemma}{Lemma}{Lemmas}
+%\crefname{remark}{Remark}{Remarks}
+%\Crefname{remark}{Remark}{Remarks}
+%\crefname{prob}{Problem}{Problems}
+%\Crefname{prob}{Problem}{Problems}
+%\crefname{constr}{Constraint}{Constraints} %{Constr.}{Constrs.}%
+%\Crefname{constr}{Constraint}{Constraints}
+%\crefname{algorithm}{Algorithm}{Algorithms}
+%\Crefname{algorithm}{Algorithm}{Algorithms}
+%crefname{prop}{Prop.}{Props.}
+%\Crefname{prop}{Proposition}{Propositions}
+%\crefname{ALC@unique}{step}{steps}
+%\Crefname{ALC@unique}{Step}{Steps}
+
+% Misc
+\newcommand{\wrt}{w.r.t.}
+
+
+%% OLD MACROS (by IROS 2016 Paper)
+\newcommand{\calS}{\mathcal{S}}
+\newcommand{\calW}{\mathcal{W}}
+\newcommand{\calA}{\mathcal{A}}
+\newcommand{\calB}{\mathcal{B}}
+\newcommand{\bcalB}{\boldsymbol{\mathcal{B}}}
+% \newcommand{\graph}{\mathcal{G}}
+\newcommand{\calV}{\mathcal{V}}
+\newcommand{\calE}{\mathcal{E}}
+\newcommand{\calG}{\mathcal{G}}
+\newcommand{\calK}{\mathcal{K}}
+\newcommand{\calN}{\mathcal{N}}
+\newcommand{\calO}{\mathcal{O}}
+
+
+%\newcommand{\diag}{\mathrm{diag}}
+
+\renewcommand{\sp}{\mathbf{span}}
+
+
+\newcommand{\bbeta}{\boldsymbol{\beta}}
+\newcommand{\bomega}{\boldsymbol{\omega}}
+\newcommand{\bnu}{\boldsymbol{\nu}}
+\newcommand{\p}{\boldsymbol{p}}
+\renewcommand{\v}{\boldsymbol{v}}
+\renewcommand{\o}{\boldsymbol{o}}
+\renewcommand{\t}{\boldsymbol{t}}
+%\newcommand{\z}{\boldsymbol{z}}
+\newcommand{\e}{\boldsymbol{e}}
+\newcommand{\m}{\boldsymbol{m}}
+\newcommand{\n}{\boldsymbol{n}}
+\newcommand{\x}{\boldsymbol{x}}
+\newcommand{\y}{\boldsymbol{y}}
+\newcommand{\s}{\boldsymbol{s}}
+\newcommand{\g}{\boldsymbol{g}}
+\newcommand{\I}{\boldsymbol{I}}
+\renewcommand{\b}{\boldsymbol{b}}
+\newcommand{\q}{\boldsymbol{q}}
+\newcommand{\w}{\boldsymbol{w}}
+\newcommand{\bpsi}{\boldsymbol{\psi}}
+\renewcommand{\u}{\boldsymbol{u}}
+\newcommand{\1}{\boldsymbol{1}}
+\newcommand{\0}{\boldsymbol{0}}
+\renewcommand{\d}{\boldsymbol{d}}
+\newcommand{\f}{\boldsymbol{f}}
+\newcommand{\h}{\boldsymbol{h}}
+\renewcommand{\k}{\boldsymbol{k}}
+\newcommand{\A}{\boldsymbol{A}}
+\newcommand{\B}{\boldsymbol{B}}
+\newcommand{\C}{\boldsymbol{C}}
+%\renewcommand{\D}{\boldsymbol{D}}
+\newcommand{\E}{\boldsymbol{E}}
+\newcommand{\F}{\boldsymbol{F}}
+\newcommand{\K}{\boldsymbol{K}}
+\renewcommand{\L}{\boldsymbol{L}}
+\newcommand{\M}{\boldsymbol{M}}
+\renewcommand{\O}{\boldsymbol{O}}
+\renewcommand{\P}{\boldsymbol{P}}
+\newcommand{\Q}{\boldsymbol{Q}}
+\newcommand{\R}{\boldsymbol{R}}
+\renewcommand{\S}{\boldsymbol{S}}
+\newcommand{\T}{\boldsymbol{T}}
+\newcommand{\V}{\boldsymbol{V}}
+\newcommand{\W}{\mathcal{W}}
+\newcommand{\X}{\boldsymbol{X}}
+\newcommand{\Y}{\boldsymbol{Y}}
+\newcommand{\Z}{\boldsymbol{Z}}
+
+% reference redifined
+\newcommand{\refnew}[1]{~(\ref{#1})}
+
+% Macro for the blue box in the paper.
+\newcommand{\highlightBox}[2]
+{
+\begin{mdframed}
+[backgroundcolor=green!10,rightline=true,leftline=true,linewidth=3pt]
+\textbf{{#1}}
+
+{#2}
+\end{mdframed}
+}
+
+\newcommand\redBMargin[1]{
+\marginpar{\begin{tikzpicture} 
+\fill[red!100!white] (0,0) rectangle (0.5,0.5);
+\node at (0.20,0.15) {#1};
+\end{tikzpicture}}
+}
+
+\newcommand\red[1]{{\textcolor{red}{#1}}}
+\newcommand\grey[1]{{\textcolor{Gray}{#1}}}
+%\newcommand\green[1]{{\textcolor{green}{#1}}}
+\newcommand\green[1]{{\textcolor{deepgreen}{#1}}}
+\newcommand\fromPaper[1]{{\textcolor{red}{#1}}}
+%\newcommand\fromPaper[1]{{\textcolor{black}{#1}}}
+\newcommand\blue[1]{{\textcolor{blue}{#1}}}
+
+% uncomment the following (and comment the following at 3 lines from here) to show the gray parts
+% \definecolor{mygray}{gray}{0.75} % if you put 1 inside the previous parenthesis you will have a white, a 0 will give you a black
+%\newcommand\old[1]{{\textcolor{mygray}{#1}}}
+% uncomment the following (and comment the previous) to not show the gray parts
+\newcommand{\old}[1]{}  %comment not showed
+
+%% Highlight with a red box in equation
+\newcommand{\highlightEqRed}[1]{%
+  \colorbox{red!50}{$\displaystyle#1$}}
+\newcommand{\highlightEqGreen}[1]{%
+  \colorbox{green!50}{$\displaystyle#1$}}
+\newcommand{\highlightEqCyan}[1]{%
+  \colorbox{cyan!50}{$\displaystyle#1$}}
+\newcommand{\highlightEqYellow}[1]{%
+  \colorbox{yellow!50}{$\displaystyle#1$}}
+%% END Highlight with a red box in equation
+
+
+\newcommand\todo[1]{{\textcolor{red}{\textbf{TODO}: #1}}}
+\newcommand\synonym{\textbf{{\textcolor{red}{(FIND synonim)}}}}
+\newcommand\toCite{\textbf{{\textcolor{red}{(cite appropriate
+        work)}}}}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "main"
+%%% End:
+
+\newcommand{\De}{\mathrm{D}}
+
+\newcommand\gauss[2]{\mathcal{N}(#1, #2)}

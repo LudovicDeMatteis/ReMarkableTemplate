@@ -1,0 +1,30 @@
+% Name commands
+\newcommand{\ld}[1]{\colorbox{NavyBlue}{\color{white}   \textsf{\textbf{Ludovic}}} \textcolor{NavyBlue}{#1}}
+\newcommand{\el}[1]{\colorbox{Fuchsia}{\color{white}   \textsf{\textbf{Elodie}}} \textcolor{Fuchsia}{#1}}
+\newcommand{\lc}[1]{\colorbox{Peach}{\color{white}\textsf{\textbf{Leo}}} \textcolor{Peach}{#1}}
+
+%\renewcommand{\ld}[1]{}
+
+% Suggestions and corrections commands
+\newcommand{\corr}[1]{\textcolor{blue}{#1}}
+\newcommand{\sugg}[1]{\textcolor{green}{#1}}
+
+%% Colors
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+\definecolor{lightgray}{gray}{0.95} %the shade of grey that stack exchange uses
+
+\lstset{  
+language=python,  
+tabsize=4,  
+basicstyle=\ttm,
+morekeywords={np, vstack, random, uniform, zeros, ones, copy},              % Add keywords here
+keywordstyle=\ttb\color{deepblue},
+emph={normalize, b, a , X, Y, N},          % Custom highlighting
+emphstyle=\ttb\color{deepred},    % Custom highlighting style
+backgroundcolor = \color{lightgray},
+frame=tb,                         % Any extra options here
+breaklines=true,
+showstringspaces=false  
+}
