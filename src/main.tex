@@ -1,6 +1,4 @@
-%\documentclass[11pt, twocolumn]{article}
-\documentclass[a4paper, 10pt, conference, onecolumn]{IEEE_template/IEEEtran}
-% \IEEEoverridecommandlockouts
+\documentclass[11pt]{article}
 
 \usepackage[utf8]{inputenc}
 
@@ -8,6 +6,9 @@
 \input{Imports/commands.tex}
 \input{Imports/notations.tex}
 \input{Imports/operators.tex}
+\usepackage{forloop}
+\usepackage{fmtcount}
+\usepackage{array}
 
 % \addbibresource{Bib_files/references.bib}
 % \AtEveryBibitem{
@@ -21,11 +22,29 @@
 \date{}
 
 \begin{document}
-This pdf should be generated from the main.tex file. It should appear in an orphan branch called "pdf" in the git repository.
+\newcounter{hour}
+\newcounter{counter}
+\newcommand{\jumpsize}{0.3cm}
 
-\maketitle
-\tableofcontents
-
+\begin{minipage}[t]{0.5\textwidth}
+\forloop{counter}{0}{\value{counter}<10}{
+    This is iteration number \arabic{counter}.\\
+}
+\end{minipage}%
+\begin{minipage}[t]{0.5\textwidth}
+    \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+    \begin{tabularx}{0.9\textwidth}{m{1cm}|Y}
+        \hline
+        \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            &  \\[\jumpsize] \hline
+        \forloop{hour}{8}{\value{hour}<20}{
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            &  \\[\jumpsize] \hline
+        }
+        \multirow{2}{*}{20h} & \\[\jumpsize] \cdashline{2-2}
+            &  \\ \hline
+    \end{tabularx}
+\end{minipage}
 
 % \printbibliography
 
