@@ -1,3 +1,4 @@
+
 \documentclass[11pt]{article}
 
 \usepackage[utf8]{inputenc}
@@ -10,42 +11,4346 @@
 \usepackage{fmtcount}
 \usepackage{array}
 
-% \addbibresource{Bib_files/references.bib}
-% \AtEveryBibitem{
-%   \clearfield{note}
-%   \clearfield{doi}
-%   \clearfield{pages}
-% }
+\DeclareFontFamily{U}{matha}{\hyphenchar\font45}
+\DeclareFontShape{U}{matha}{m}{n}{
+<5>matha5<6>matha6<7>matha7<8>matha8<9>matha9
+<10><10.95>matha10
+<12><14.4><17.28><20.74><24.88>matha12
+}{}
+\DeclareSymbolFont{matha}{U}{matha}{m}{n}
+\DeclareFontSubstitution{U}{matha}{m}{n}
+\DeclareMathSymbol{\ovoid}{\mathbin}{matha}{"6C}
 
 \title{Latex project template}
 \author{Ludovic De Matteis - Initial project by Côme Perrot}
 \date{}
 
 \begin{document}
+\pagenumbering{gobble}
 \newcounter{hour}
 \newcounter{counter}
-\newcommand{\jumpsize}{0.3cm}
+\newcommand{\jumpsize}{0.45cm}
+\newcommand{\dotspaces}{0.4cm}
+    
+\Huge{\bf{ Mardi 15 Octobre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
 
-\begin{minipage}[t]{0.5\textwidth}
-\forloop{counter}{0}{\value{counter}<10}{
-    This is iteration number \arabic{counter}.\\
-}
-\end{minipage}%
-\begin{minipage}[t]{0.5\textwidth}
-    \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
-    \begin{tabularx}{0.9\textwidth}{m{1cm}|Y}
-        \hline
-        \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
-            &  \\[\jumpsize] \hline
-        \forloop{hour}{8}{\value{hour}<20}{
-            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
-            &  \\[\jumpsize] \hline
-        }
-        \multirow{2}{*}{20h} & \\[\jumpsize] \cdashline{2-2}
-            &  \\ \hline
-    \end{tabularx}
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
 \end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Mercredi 16 Octobre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
 
-% \printbibliography
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Jeudi 17 Octobre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
 
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Vendredi 18 Octobre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Samedi 19 Octobre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Dimanche 20 Octobre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Lundi 21 Octobre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Mardi 22 Octobre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Mercredi 23 Octobre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Jeudi 24 Octobre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Vendredi 25 Octobre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Samedi 26 Octobre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Dimanche 27 Octobre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Lundi 28 Octobre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Mardi 29 Octobre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Mercredi 30 Octobre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Jeudi 31 Octobre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Vendredi 1 Novembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Samedi 2 Novembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Dimanche 3 Novembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Lundi 4 Novembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Mardi 5 Novembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Mercredi 6 Novembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Jeudi 7 Novembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Vendredi 8 Novembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Samedi 9 Novembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Dimanche 10 Novembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Lundi 11 Novembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Mardi 12 Novembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Mercredi 13 Novembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Jeudi 14 Novembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Vendredi 15 Novembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Samedi 16 Novembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Dimanche 17 Novembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Lundi 18 Novembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Mardi 19 Novembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Mercredi 20 Novembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Jeudi 21 Novembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Vendredi 22 Novembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Samedi 23 Novembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Dimanche 24 Novembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Lundi 25 Novembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Mardi 26 Novembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Mercredi 27 Novembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Jeudi 28 Novembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Vendredi 29 Novembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Samedi 30 Novembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Dimanche 1 Décembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Lundi 2 Décembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Mardi 3 Décembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Mercredi 4 Décembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Jeudi 5 Décembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Vendredi 6 Décembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Samedi 7 Décembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Dimanche 8 Décembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Lundi 9 Décembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Mardi 10 Décembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Mercredi 11 Décembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Jeudi 12 Décembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Vendredi 13 Décembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Samedi 14 Décembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Dimanche 15 Décembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Lundi 16 Décembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Mardi 17 Décembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Mercredi 18 Décembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Jeudi 19 Décembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Vendredi 20 Décembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Samedi 21 Décembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Dimanche 22 Décembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Lundi 23 Décembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Mardi 24 Décembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Mercredi 25 Décembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Jeudi 26 Décembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Vendredi 27 Décembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Samedi 28 Décembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Dimanche 29 Décembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Lundi 30 Décembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Mardi 31 Décembre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Mercredi 1 Janvier 2025}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Jeudi 2 Janvier 2025}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Vendredi 3 Janvier 2025}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Samedi 4 Janvier 2025}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Dimanche 5 Janvier 2025}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Lundi 6 Janvier 2025}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Mardi 7 Janvier 2025}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Mercredi 8 Janvier 2025}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Jeudi 9 Janvier 2025}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Vendredi 10 Janvier 2025}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Samedi 11 Janvier 2025}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
+\Huge{\bf{ Dimanche 12 Janvier 2025}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+    
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+\newpage
+    
 \end{document}
+    

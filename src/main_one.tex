@@ -1,0 +1,81 @@
+\documentclass[11pt]{article}
+
+\usepackage[utf8]{inputenc}
+
+\input{Imports/librairies.tex}
+\input{Imports/commands.tex}
+\input{Imports/notations.tex}
+\input{Imports/operators.tex}
+\usepackage{forloop}
+\usepackage{fmtcount}
+\usepackage{array}
+
+
+\DeclareFontFamily{U}{matha}{\hyphenchar\font45}
+\DeclareFontShape{U}{matha}{m}{n}{
+<5>matha5<6>matha6<7>matha7<8>matha8<9>matha9
+<10><10.95>matha10
+<12><14.4><17.28><20.74><24.88>matha12
+}{}
+\DeclareSymbolFont{matha}{U}{matha}{m}{n}
+\DeclareFontSubstitution{U}{matha}{m}{n}
+\DeclareMathSymbol{\ovoid}{\mathbin}{matha}{"6C}
+
+\title{Latex project template}
+\author{Ludovic De Matteis - Initial project by Côme Perrot}
+\date{}
+
+\begin{document}
+\newcounter{hour}
+\newcounter{counter}
+\newcommand{\jumpsize}{0.45cm}
+\newcommand{\dotspaces}{0.4cm}
+
+\Huge{\bf{Mardi 15 Octobre 2024}} \hfill \normalsize{Mood: $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$ $\ovoid$}\\
+
+\vspace{0.3cm}
+\begin{center}
+    \huge{\underline{To Do List}}\\[0.5cm]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+    $\square$ \dotfill\\[\dotspaces]
+\end{center}
+
+\vspace{0.5cm}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Notes}}\\[0.5cm]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+        \dotfill\\[\dotspaces]
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+        \huge{\underline{Planning}}\\[0.7cm]
+        \normalsize
+        \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+        \begin{tabularx}{0.9\textwidth}{|m{1cm}|Y|}
+            \hline
+            \multirow{2}{=}{07h} & \\[\jumpsize] \cdashline{2-2}
+            \forloop{hour}{8}{\value{hour}<20}{
+                \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+            }
+            \multirow{2}{*}{\padzeroes[2]\decimal{hour}h} & \\[\jumpsize] \cdashline{2-2}
+                &  \\ \hline
+        \end{tabularx}
+    \end{center}
+\end{minipage}
+
+\end{document}
